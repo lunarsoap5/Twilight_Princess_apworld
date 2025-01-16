@@ -50,7 +50,7 @@ Download and install git from here: https://git-scm.com/downloads
 Then clone this repository with git by running this in a command prompt:
 
 ```
-git clone https://github.com/tanjo3/tww_apworld.git
+git clone https://github.com/WritingHusky/Twilight_Princess_apworld.git
 ```
 
 ### Installing Python

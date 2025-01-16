@@ -12,21 +12,14 @@ You'll need the following components to be able to play/generate with Twilight P
 
 - Install [Archipelago](https://github.com/ArchipelagoMW/Archipelago/releases) v0.5.1 or higher.\
    **Make sure to install the Generator if you intend to generate multiworlds.**
-- The latest version of the [TP APWorld](https://github.com/tanjo3/tp_apworld/releases/latest).
+- The latest version of the [TP APWorld](https://github.com/WritingHusky/Twilight_Princess_apworld/releases/latest).
 
 If you're playing Twilight Princess, you'll also need:
 
 - Install [Dolphin Emulator](https://dolphin-emu.org/download/).\
    **We recommend using the latest release.**
-- The latest version of the [TWW AP Randomizer Build](https://github.com/tanjo3/wwrando/releases/latest).
+- The latest version of the [TP Randomizer Build](https://tprandomizer.com/downloads/).
 - A Twilight Princess ISO (North American version), probably named "Legend of Zelda, The - Twilight Princess (USA).iso".
-
-If you intend to play under Linux, you will need to consider the following information.
-
-- Grab the `tar.gz` version of Archipelago, not the `AppImage`. The file name should be similar to the following on the
-  release page: `Archipelago_X.X.X_linux-x86_64.tar.gz`.
-- For Dolphin, you can use the flatpak package
-  [available on Flathub](https://flathub.org/apps/org.DolphinEmu.dolphin-emu).
 
 ## Installation
 
