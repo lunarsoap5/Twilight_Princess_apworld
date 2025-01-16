@@ -1,0 +1,374 @@
+﻿# Q. What is this file?
+# A. This file contains options which allow you to configure your multiworld experience while allowing
+#    others to play how they want as well.
+#
+# Q. How do I use it?
+# A. The options in this file are weighted. This means the higher number you assign to a value, the
+#    more chances you have for that option to be chosen. For example, an option like this:
+#
+#    map_shuffle:
+#      on: 5
+#      off: 15
+#
+#    Means you have 5 chances for map shuffle to occur, and 15 chances for map shuffle to be turned
+#    off.
+#
+# Q. I've never seen a file like this before. What characters am I allowed to use?
+# A. This is a .yaml file. You are allowed to use most characters.
+#    To test if your yaml is valid or not, you can use this website:
+#        http://www.yamllint.com/
+#    You can also verify that your Archipelago options are valid at this site:
+#        https://archipelago.gg/check
+
+# Your name in-game, limited to 16 characters.
+#     {player} will be replaced with the player's slot number.
+#     {PLAYER} will be replaced with the player's slot number, if that slot number is greater than 1.
+#     {number} will be replaced with the counter value of the name.
+#     {NUMBER} will be replaced with the counter value of the name, if the counter value is greater than 1.
+name: Player{number}
+
+# Used to describe your yaml. Useful if you have multiple files.
+description: Default Twilight Princess Template
+
+game: Twilight Princess
+requires:
+  version: 0.5.1 # Version of Archipelago required for this yaml to work as expected.
+
+Twilight Princess:
+  # Game Options
+  progression_balancing:
+    # A system that can move progression earlier, to try and prevent the player from getting stuck and bored early.
+    #
+    # A lower setting means more getting stuck. A higher setting means less getting stuck.
+    #
+    # You can define additional values between the minimum and maximum values.
+    # Minimum value is 0
+    # Maximum value is 99
+    random: 0
+    random-low: 0
+    random-high: 0
+    disabled: 0 # equivalent to 0
+    normal: 50 # equivalent to 50
+    extreme: 0 # equivalent to 99
+
+  accessibility:
+    # Set rules for reachability of your items/locations.
+    #
+    # **Full:** ensure everything can be reached and acquired.
+    #
+    # **Minimal:** ensure what is needed to reach your goal can be acquired.
+    full: 50
+    minimal: 0
+
+  death_link:
+    # When you die, everyone who enabled death link dies. Of course, the reverse is true too.
+    "false": 50
+    "true": 0
+
+  # Progression Locations
+  progression_dungeons:
+    # This controls whether dungeon locations are randomized.
+    "false": 0
+    "true": 50
+
+  golden_bugs_shuffled:
+    # This controls whether the golden bugs are shuffled.
+    "false": 50
+    "true": 0
+
+  sky_characters_shuffled:
+    # This controls whether the sky characters are shuffled.
+    "false": 50
+    "true": 0
+
+  npc_items_shuffled:
+    # This controls whether the NPC items are shuffled.
+    "false": 50
+    "true": 0
+
+  shop_items_shuffled:
+    # This controls whether the shop items are shuffled.
+    "false": 50
+    "true": 0
+
+  hidden_skills_shuffled:
+    # This controls whether the hidden skills are shuffled.
+    "false": 50
+    "true": 0
+
+  poe_shuffled:
+    # This controls whether Poe Souls are shuffled.
+    "false": 50
+    "true": 0
+
+  overworld_shuffled:
+    # This controls whether overworld locations are shuffled.
+    "false": 50
+    "true": 0
+
+  heart_piece_shuffled:
+    # This controls whether heart pieces are shuffled.
+    "false": 50
+    "true": 0
+
+  dungeons_shuffled:
+    # This controls whether dungeons are shuffled.
+    "false": 50
+    "true": 0
+
+  # Item Randomizer Modes
+  map_and_compass_settings:
+    # Controls how dungeon maps and compasses are randomized.
+    #
+    # - **Start With Maps & Compasses:** You will start the game with the dungeon maps and compasses for all dungeons.
+    # - **Vanilla Maps & Compasses:** Dungeon maps and compasses will be kept in their vanilla location (non-randomized).
+    # - **Own Dungeon Maps & Compasses:** Dungeon maps and compasses will be randomized locally within their own dungeon.
+    # - **Any Dungeon Maps & Compasses:** Dungeon maps and compasses will be randomized locally within any dungeon.
+    # - **Local Maps & Compasses:** Dungeon maps and compasses will be randomized locally anywhere.
+    # - **Key-Lunacy:** Dungeon maps and compasses can be found anywhere, without restriction.
+    startwith: 0
+    vanilla: 0
+    own_dungeon: 50
+    any_dungeon: 0
+    keysy: 0
+
+  small_key_settings:
+    # Controls how small keys are randomized.
+    #
+    # - **Start With Small Keys:** You will start the game with the small keys for all dungeons.
+    # - **Vanilla Small Keys:** Small keys will be kept in their vanilla location (non-randomized).
+    # - **Own Dungeon Small Keys:** Small keys will be randomized locally within their own dungeon.
+    # - **Any Dungeon Small Keys:** Small keys will be randomized locally within any dungeon.
+    # - **Local Small Keys:** Small keys will be randomized locally anywhere.
+    # - **Key-Lunacy:** Small keys can be found in any progression location, if dungeons are randomized.
+    startwith: 0
+    vanilla: 0
+    own_dungeon: 50
+    any_dungeon: 0
+    keysy: 0
+
+  big_key_settings:
+    # Controls how big keys are randomized.
+    #
+    # - **Start With Big Keys:** You will start the game with the big keys for all dungeons.
+    # - **Vanilla Big Keys:** Big keys will be kept in their vanilla location (non-randomized).
+    # - **Own Dungeon Big Keys:** Big keys will be randomized locally within their own dungeon.
+    # - **Any Dungeon Big Keys:** Big keys will be randomized locally within any dungeon.
+    # - **Local Big Keys:** Big keys will be randomized locally anywhere.
+    # - **Key-Lunacy:** Big keys can be found in any progression location, if dungeons are randomized.
+    startwith: 0
+    vanilla: 0
+    own_dungeon: 50
+    any_dungeon: 0
+    keysy: 0
+
+  # Convenience Tweaks
+  skip_lakebed_entrance:
+    # Skip the Lakebed Temple entrance.
+    "false": 50
+    "true": 0
+
+  skip_arbiters_grounds_entrance:
+    # Skip the Arbiter's Grounds entrance.
+    "false": 50
+    "true": 0
+
+  skip_snowpeak_entrance:
+    # Skip the Snowpeak Ruins entrance.
+    "false": 50
+    "true": 0
+
+  skip_city_in_the_sky_entrance:
+    # Skip the City in the Sky entrance.
+    "false": 50
+    "true": 0
+
+  goron_mines_entrance:
+    # Set the entrance to Goron Mines.
+    #
+    # - **Open:** The entrance is open.
+    # - **Closed:** The entrance is closed.
+    # - **No Wrestling:** The entrance is closed, but the Goron Wrestling mini-game is not required.
+    closed: 0
+    no_wrestling: 50
+    open: 0
+
+  tot_entrance:
+    open: 50
+    open_grove: 0
+    closed: 0
+
+  skip_prologue:
+    # Skip the prologue.
+    "false": 0
+    "true": 50
+
+  faron_twilight_cleared:
+    # Faron Twilight is cleared.
+    "false": 0
+    "true": 50
+
+  eldin_twilight_cleared:
+    # Eldin Twilight is cleared.
+    "false": 0
+    "true": 50
+
+  lanayru_twilight_cleared:
+    # Lanayru Twilight is cleared.
+    "false": 0
+    "true": 50
+
+  skip_mdh:
+    # Skip the Midnas Darkest Hour.
+    "false": 0
+    "true": 50
+
+  open_map:
+    # Start with the map open.
+    "false": 50
+    "true": 0
+
+  increase_wallet:
+    # Increase the wallet size.
+    #
+    "false": 50
+    "true": 0
+
+  transform_anywhere:
+    # Transform into a wolf anywhere.
+    "false": 50
+    "true": 0
+
+  barren_dungeons:
+    # Set the dungeons to be barren.
+    #
+    "false": 50
+    "true": 0
+
+  # Required Bosses (Not Implemented Yet)
+  # required_bosses:
+  #   # In this mode, you will not be allowed to beat the game until certain randomly-chosen bosses are defeated. Nothing in
+  #   # dungeons for other bosses will ever be required.
+  #   #
+  #   # You can see which islands have the required bosses on them by opening the sea chart and checking which islands have
+  #   # blue quest markers.
+  #   "false": 50
+  #   "true": 0
+
+  # num_required_bosses:
+  #   # Select the number of randomly-chosen bosses that are required in Required Bosses Mode.
+  #   #
+  #   # The door to Puppet Ganon will not unlock until you've defeated all of these bosses. Nothing in dungeons for other
+  #   # bosses will ever be required.
+  #   #
+  #   # You can define additional values between the minimum and maximum values.
+  #   # Minimum value is 1
+  #   # Maximum value is 6
+  #   4: 50
+  #   random: 0
+  #   random-low: 0
+  #   random-high: 0
+
+  # included_dungeons:
+  #   # A list of dungeons that should always be included when required bosses mode is on.
+  #   []
+
+  # excluded_dungeons:
+  #   # A list of dungeons that should always be excluded when required bosses mode is on.
+  #   []
+
+  # Difficulty Options
+  logic_rules:
+    # Set the logic rules for the game.
+    #
+    # - **No Glitches:** The game is completable without using glitches.
+    # - **Glitches:** The game is completable using glitches.
+    # - **No Logic:** The game is completable without using glitches, but the logic is not guaranteed to be fair.
+    # - **Glitches Logic:** The game is completable using glitches, but the logic is not guaranteed to be fair.
+    #
+    # **Glitchless** is recommended for most players.
+    #
+    # **Glitches** is recommended for players who are familiar with the game and are looking for a challenge.
+    #
+    # **No Logic** is recommended for players who are looking for a very challenging experience.
+    #
+    # **Glitches Logic** is recommended for players who are looking for a very challenging experience and are familiar with the game.
+    glitchless: 50
+    glitched: 0
+    no_logic: 0
+
+  castle_requirements:
+    # Set the requirements for Hyrule Castle.
+    #
+    open: 0
+    fused_shadows: 50
+    mirror_shard: 0
+    all_dungeons: 0
+    vanilla: 0
+
+  palace_requirements:
+    # Set the requirements for Palace of Twilight.
+    #
+    open: 0
+    fused_shadows: 50
+    mirror_shard: 0
+    vanilla: 0
+
+  faron_woods_logic:
+    open: 50
+    closed: 0
+
+  bonks_do_damage:
+    # Bonking into walls will cause damage.
+    "false": 50
+    "true": 0
+
+  damage_magnification:
+    # Increase the amount of damage taken.
+    #
+    vanilla: 50
+    double: 0
+    triple: 0
+    quadruple: 0
+    ohko: 0
+
+  # Work-in-Progress Options
+
+  # Item & Location Options
+  local_items:
+    # Forces these items to be in their native world.
+    []
+
+  non_local_items:
+    # Forces these items to be outside their native world.
+    []
+
+  start_inventory:
+    # Start with these items.
+    {}
+
+  start_hints:
+    # Start with these item's locations prefilled into the ``!hint`` command.
+    []
+
+  start_location_hints:
+    # Start with these locations and their item prefilled into the ``!hint`` command.
+    []
+
+  exclude_locations:
+    # Prevent these locations from having an important item.
+    []
+
+  priority_locations:
+    # Prevent these locations from having an unimportant item.
+    []
+
+  item_links:
+    # Share part of your item pool with other players.
+    []
+
+  start_inventory_from_pool:
+    # Start with these items and don't place them in the world.
+    #
+    # The game decides what the replacement items will be.
+    {}
