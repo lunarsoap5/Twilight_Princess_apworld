@@ -111,10 +111,10 @@ function mk_apworld() {
 ##
 function cp_data() {
     local root="$1" destdir="$2"
-    # echo "=> Copying over the extra data"
-    # cp --verbose ${root}/LICENSE.md ${destdir}
-    # cp --verbose ${root}/README.md ${destdir}
-    # cp --verbose "${root}/Twilight Princess.yaml" ${destdir}
+    echo "=> Copying over the extra data"
+    cp --verbose ${root}/LICENSE.md ${destdir}
+    cp --verbose ${root}/README.md ${destdir}
+    cp --verbose "${root}/Twilight Princess.yaml" ${destdir}
 }
 
 ##
@@ -140,7 +140,7 @@ function main() {
     pre_flight
 
     local target_path="${CWD}/target"
-    local bundle_base="tp_apworld"
+    local bundle_base="Twilight_Princess_apworld"
     mkdir --parents ${target_path}
 
     case "$1" in
@@ -155,7 +155,7 @@ function main() {
 
     # Create the release bundle.
     *)
-        local tag="${TAG:-$(date '+%Y-%m-%d_%H%M')}"
+        local tag="v0.1"
         local project="$(realpath ${CWD}/..)"
         local bundle="${bundle_base}-${tag}"
         local destdir="${target_path}/${bundle}"
