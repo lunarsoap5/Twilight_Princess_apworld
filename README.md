@@ -37,7 +37,7 @@ server.
 
 - Snowpeak Runis 2nd Half, Agitha Rewards, Jovani Rewards, and Story items are all logically no accessible acording the the generator.
 
-Feel free to report any other issues in the Twilight Princess thread in the Archipelago server! I'll take a look and see what I
+Feel free to report any other issues here or in the Twilight Princess thread in the Archipelago server! I'll take a look and see what I
 can do. Suggestions for improvements are also welcome.
 
 ## Planned Features
