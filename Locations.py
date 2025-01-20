@@ -3699,7 +3699,7 @@ LOCATION_TABLE = {
         stage_id=TPStages.Lake_Hylia_Long_Cave,
         type=TPLocationType.Region,
         region=NodeID.Lake_Hylia_Cave,
-        offset=0x3,
+        offset=0x2,
         bit=0x4,
     ),
     "Lake Lantern Cave Eleventh Chest": TPLocationData(
@@ -3808,7 +3808,7 @@ LOCATION_TABLE = {
         type=TPLocationType.Region,
         region=NodeID.Lake_Hylia_Cave,
         offset=0x2,
-        bit=0x40,
+        bit=0x1,
     ),
     "Lake Lantern Cave Sixth Chest": TPLocationData(
         code=406,
@@ -3817,7 +3817,7 @@ LOCATION_TABLE = {
         type=TPLocationType.Region,
         region=NodeID.Lake_Hylia_Cave,
         offset=0x2,
-        bit=0x1,
+        bit=0x40,
     ),
     "Lake Lantern Cave Tenth Chest": TPLocationData(
         code=407,
