@@ -39,7 +39,7 @@ ITEM_TO_HEX: Dict[str, int] = {
     "Spinner": 0x41,
     "Ball and Chain": 0x42,
     "Progressive Hero's Bow": 0x43,
-    "Progressive Clawshot": 0x47,
+    "Progressive Clawshot": 0x44,
     "Iron Boots": 0x45,
     "Progressive Dominion Rod": 0x46,
     "Lantern": 0x48,
