@@ -1254,7 +1254,7 @@ def has_shield(state: CollectionState, player: int):
             state.can_reach_region("Castle Town Goron House", player)
             and not state._tp_shops_shuffled(player)
         )
-        or state.can_reach_region("Death Mountain Hot Spring", player)
+        # or state.can_reach_region("Death Mountain Hot Spring", player)
     )
 
 
