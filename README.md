@@ -1,5 +1,9 @@
 # Twilight Princess
 
+## Installation & Usage
+
+See the [setup guide](https://github.com/WritingHusky/Twilight_Princess_apworld/blob/main/docs/setup_en.md) for instructions.
+
 ## What does randomization do to this game?
 
 Items get shuffled between the different locations in the game, so each playthrough is unique. Randomized locations

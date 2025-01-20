@@ -21,6 +21,13 @@ If you're playing Twilight Princess, you'll also need:
 - The latest version of the [TP Randomizer Build](https://tprandomizer.com/downloads/).
 - A Twilight Princess ISO (North American version), probably named "Legend of Zelda, The - Twilight Princess (USA).iso".
 
+If you intend to play under Linux, you will need to consider the following information.
+
+- Grab the `tar.gz` version of Archipelago, not the `AppImage`. The file name should be similar to the following on the
+  release page: `Archipelago_X.X.X_linux-x86_64.tar.gz`.
+- For Dolphin, you can use the flatpak package
+  [available on Flathub](https://flathub.org/apps/org.DolphinEmu.dolphin-emu).
+
 ## Installation
 
 All users should follow these steps:
@@ -29,7 +36,7 @@ All users should follow these steps:
 2. Double-click the `Twilight Princess.apworld` file. It should automatically install the APWorld after a little while. You will get a
    little dialog window telling you it has been installed successfully. \* Alternatively, copy the `Twilight Princess.apworld` to your Archipelago installation's `custom_worlds` folder (Windows default
    to: `%programdata%/Archipelago`).
-3. Copy the contents of the `lib` folder in the downloaded TWW APWorld zip file to your Archipelago installation's `lib`
+3. Copy the contents of the `lib` folder in the downloaded Twilight Princess APWorld zip file to your Archipelago installation's `lib`
    folder.
 
 If you're playing Twilight Princess, you must also download the REL loader from https://tprandomizer.com/ and place both that file and the gci file in the save data of dolphin
@@ -90,7 +97,7 @@ Once you do, follow these steps to connect to the room:
 - Ensure that you are running version v0.5.1 or higher of Archipelago.
 - If you do not see the client in the launcher, ensure the `Twilight Princess.apworld` file is in the correct folder (the
   `custom_worlds` folder of your Archipelago installation). Additionally, ensure you have copied the contents of the `lib`
-  folder in the downloaded TWW APWorld zip file to your Archipelago installation's `lib` folder.
+  folder in the downloaded Twilight Princess APWorld zip file to your Archipelago installation's `lib` folder.
 - If the client is not working, double-check that you have the most recent release of the `Twilight Princess.apworld` file.
   Ensure that the content of the `lib` folder from the release download has been placed in
   your Archipelago installation's `lib` folder.
