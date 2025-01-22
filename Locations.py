@@ -229,7 +229,7 @@ LOCATION_TABLE = {
         stage_id=TPStages.Arbiters_Grounds,
         type=TPLocationType.Region,
         region=NodeID.Arbiters_Grounds,
-        offset=0x0,
+        offset=0x1,
         bit=0x80,
     ),
     "Arbiters Grounds Ghoul Rat Room Chest": TPLocationData(
