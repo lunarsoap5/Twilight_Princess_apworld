@@ -3667,7 +3667,7 @@ LOCATION_TABLE = {
         stage_id=TPStages.Lake_Hylia,
         type=TPLocationType.Region,
         region=NodeID.Grotto,
-        offset=0x3,
+        offset=0x1,
         bit=0x20,
     ),
     "Lake Hylia Tower Poe": TPLocationData(
@@ -3694,7 +3694,7 @@ LOCATION_TABLE = {
         stage_id=TPStages.Lake_Hylia,
         type=TPLocationType.Region,
         region=NodeID.Grotto,
-        offset=0x1,
+        offset=0x3,
         bit=0x20,
     ),
     "Lake Lantern Cave Eighth Chest": TPLocationData(
