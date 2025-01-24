@@ -1472,7 +1472,7 @@ LOCATION_TABLE = {
         type=TPLocationType.Region,
         region=NodeID.Lakebed_Temple,
         offset=0x3,
-        bit=0x8,
+        bit=0x80,
     ),
     "Lakebed Temple West Second Floor Southwest Underwater Chest": TPLocationData(
         code=146,
