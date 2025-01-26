@@ -146,7 +146,7 @@ class TPWorld(World):
 
         adjusted_classification = None
         # if dungeons are not progression, then the key is filler
-        if not self.options.progression_dungeons and name.endswith(" Key"):
+        if not self.options.dungeons_shuffled and name.endswith(" Key"):
             adjusted_classification = IC.filler
 
         return adjusted_classification
@@ -192,7 +192,7 @@ class TPWorld(World):
         options = self.options
 
         # if dungeons are not progression, then keys should be vanilla
-        if not options.progression_dungeons:
+        if not options.dungeons_shuffled:
             options.small_key_settings.value = SmallKeySettings.option_vanilla
             options.big_key_settings.value = BigKeySettings.option_vanilla
             options.map_and_compass_settings.value = (
