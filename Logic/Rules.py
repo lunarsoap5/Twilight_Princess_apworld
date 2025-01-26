@@ -2834,7 +2834,7 @@ def set_location_access_rules(world: "TPWorld"):
         lambda state: (
             (
                 (
-                    (state._tp_faron_twilight_cleared(player))
+                    (not state._tp_faron_twilight_cleared(player))
                     and can_complete_prologue(state, player)
                 )
                 or (
