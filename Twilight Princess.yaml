@@ -67,57 +67,59 @@ Twilight Princess:
 
   # Progression Locations
   progression_dungeons:
-    # This controls whether dungeon locations are randomized.
+    # Not Implemented (and may be redundent)
+    # This controls whether dungeon locations are required to beat the game.
     "false": 0
     "true": 50
 
   golden_bugs_shuffled:
-    # This controls whether the golden bugs are shuffled.
+    # This controls whether the golden bugs can contain Progression items.
     "false": 50
     "true": 0
 
   sky_characters_shuffled:
-    # This controls whether the sky characters are shuffled.
+    # This controls whether the sky characters can contain Progression items.
     "false": 50
     "true": 0
 
   npc_items_shuffled:
-    # This controls whether the NPC items are shuffled.
+    # This controls whether the NPC items can contain Progression items.
     "false": 50
     "true": 0
 
   shop_items_shuffled:
-    # This controls whether the shop items are shuffled.
+    # This controls whether the shop items can contain Progression items.
     "false": 50
     "true": 0
 
   hidden_skills_shuffled:
-    # This controls whether the hidden skills are shuffled.
+    # This controls whether the hidden skills can contain Progression items.
     "false": 50
     "true": 0
 
   poe_shuffled:
-    # This controls whether Poe Souls are shuffled.
+    # This controls whether Poe Souls can contain Progression items.
     "false": 50
     "true": 0
 
   overworld_shuffled:
-    # This controls whether overworld locations are shuffled.
+    # This controls whether overworld locations can contain Progression items.
     "false": 50
     "true": 0
 
   heart_piece_shuffled:
-    # This controls whether heart pieces are shuffled.
+    # This controls whether heart pieces can contain Progression items.
     "false": 50
     "true": 0
 
   dungeons_shuffled:
-    # This controls whether dungeons are shuffled.
+    # This controls whether dungeons can contain Progression items.
     "false": 50
     "true": 0
 
   # Item Randomizer Modes
   map_and_compass_settings:
+    # NOT IMPLEMENTED YET
     # Controls how dungeon maps and compasses are randomized.
     #
     # - **Start With Maps & Compasses:** You will start the game with the dungeon maps and compasses for all dungeons.
@@ -133,6 +135,7 @@ Twilight Princess:
     keysy: 0
 
   small_key_settings:
+    # NOT IMPLEMENTED YET
     # Controls how small keys are randomized.
     #
     # - **Start With Small Keys:** You will start the game with the small keys for all dungeons.
@@ -148,6 +151,7 @@ Twilight Princess:
     keysy: 0
 
   big_key_settings:
+    # NOT IMPLEMENTED YET
     # Controls how big keys are randomized.
     #
     # - **Start With Big Keys:** You will start the game with the big keys for all dungeons.
@@ -164,26 +168,31 @@ Twilight Princess:
 
   # Convenience Tweaks
   skip_lakebed_entrance:
+    # NOT IMPLEMENTED YET (Do not change)
     # Skip the Lakebed Temple entrance.
     "false": 50
     "true": 0
 
   skip_arbiters_grounds_entrance:
+    # NOT IMPLEMENTED YET (Do not change)
     # Skip the Arbiter's Grounds entrance.
     "false": 50
     "true": 0
 
   skip_snowpeak_entrance:
+    # NOT IMPLEMENTED YET (Do not change)
     # Skip the Snowpeak Ruins entrance.
     "false": 50
     "true": 0
 
   skip_city_in_the_sky_entrance:
+    # NOT IMPLEMENTED YET (Do not change)
     # Skip the City in the Sky entrance.
     "false": 50
     "true": 0
 
   goron_mines_entrance:
+    # NOT IMPLEMENTED YET (Do not change)
     # Set the entrance to Goron Mines.
     #
     # - **Open:** The entrance is open.
@@ -194,52 +203,62 @@ Twilight Princess:
     open: 0
 
   tot_entrance:
+    # NOT IMPLEMENTED YET (Do not change)
     open: 50
     open_grove: 0
     closed: 0
 
   skip_prologue:
+    # NOT IMPLEMENTED YET (Do not change)
     # Skip the prologue.
     "false": 0
     "true": 50
 
   faron_twilight_cleared:
+    # NOT IMPLEMENTED YET (Do not change)
     # Faron Twilight is cleared.
     "false": 0
     "true": 50
 
   eldin_twilight_cleared:
+    # NOT IMPLEMENTED YET (Do not change)
     # Eldin Twilight is cleared.
     "false": 0
     "true": 50
 
   lanayru_twilight_cleared:
+    # NOT IMPLEMENTED YET (Do not change)
     # Lanayru Twilight is cleared.
     "false": 0
     "true": 50
 
   skip_mdh:
+    # NOT IMPLEMENTED YET (Do not change)
     # Skip the Midnas Darkest Hour.
     "false": 0
     "true": 50
 
   open_map:
+    # NOT IMPLEMENTED YET (Do not change)
     # Start with the map open.
     "false": 50
     "true": 0
 
   increase_wallet:
+    # NOT IMPLEMENTED YET (Do not change)
     # Increase the wallet size.
     #
     "false": 50
     "true": 0
 
   transform_anywhere:
+    # NOT IMPLEMENTED YET (Do not change)
     # Transform into a wolf anywhere.
     "false": 50
     "true": 0
 
   barren_dungeons:
+    # NOT IMPLEMENTED YET (Do not change)
     # Set the dungeons to be barren.
     #
     "false": 50
@@ -279,6 +298,7 @@ Twilight Princess:
 
   # Difficulty Options
   logic_rules:
+    # NOT IMPLEMENTED YET (Do not change)
     # Set the logic rules for the game.
     #
     # - **No Glitches:** The game is completable without using glitches.
@@ -298,32 +318,37 @@ Twilight Princess:
     no_logic: 0
 
   castle_requirements:
+    # NOT IMPLEMENTED YET (Do not change)
     # Set the requirements for Hyrule Castle.
     #
-    open: 0
-    fused_shadows: 50
+    open: 50
+    fused_shadows: 0
     mirror_shard: 0
     all_dungeons: 0
     vanilla: 0
 
   palace_requirements:
+    # NOT IMPLEMENTED YET (Do not change)
     # Set the requirements for Palace of Twilight.
     #
-    open: 0
-    fused_shadows: 50
+    open: 50
+    fused_shadows: 0
     mirror_shard: 0
     vanilla: 0
 
   faron_woods_logic:
+    # NOT IMPLEMENTED YET (Do not change)
     open: 50
     closed: 0
 
   bonks_do_damage:
+    # NOT IMPLEMENTED YET (Do not change)
     # Bonking into walls will cause damage.
     "false": 50
     "true": 0
 
   damage_magnification:
+    # NOT IMPLEMENTED YET (Do not change)
     # Increase the amount of damage taken.
     #
     vanilla: 50
