@@ -626,7 +626,7 @@ LOCATION_TABLE = {
         type=TPLocationType.Region,
         region=NodeID.City_in_the_Sky,
         offset=0x1,
-        bit=0x10,
+        bit=0x40,
     ),
     "City in The Sky West Wing Tile Worm Chest": TPLocationData(
         code=52,
@@ -634,8 +634,8 @@ LOCATION_TABLE = {
         stage_id=TPStages.Unkown,
         type=TPLocationType.Region,
         region=NodeID.City_in_the_Sky,
-        offset=0x3,
-        bit=0x40,
+        offset=0x1,
+        bit=0x10,
     ),
     "Forest Temple Big Baba Key": TPLocationData(
         code=53,
