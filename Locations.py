@@ -1921,8 +1921,8 @@ LOCATION_TABLE = {
         stage_id=TPStages.Temple_of_Time,
         type=TPLocationType.Region,
         region=NodeID.Temple_of_Time,
-        offset=0x2,
-        bit=0x10,
+        offset=0x3,
+        bit=0x20,
     ),
     "Temple of Time Big Key Chest": TPLocationData(
         code=196,
@@ -2029,8 +2029,8 @@ LOCATION_TABLE = {
         stage_id=TPStages.Temple_of_Time,
         type=TPLocationType.Region,
         region=NodeID.Temple_of_Time,
-        offset=0x3,
-        bit=0x20,
+        offset=0x2,
+        bit=0x10,
     ),
     "Temple of Time Poe Above Scales": TPLocationData(
         code=208,
