@@ -2942,3 +2942,5 @@ def set_location_access_rules(world: "TPWorld"):
         "Snowpeak Poe Among Trees",
         lambda state: (state.has("Shadow Crystal", player)),
     )
+
+    world.multiworld.completion_condition[player] = lambda state: state.has("Victory", player)
