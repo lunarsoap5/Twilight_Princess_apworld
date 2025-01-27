@@ -29,13 +29,61 @@ CONNECTION_LOST_STATUS = "Dolphin connection was lost. Please restart your emula
 CONNECTION_CONNECTED_STATUS = "Dolphin connected successfully."
 CONNECTION_INITIAL_STATUS = "Dolphin connection has not been initiated."
 
-CURR_HEALTH_ADDR = 0x804061C2
-CURR_NODE_ADDR = 0x80406B38
-SLOT_NAME_ADDR = 0x80406374
-ITEM_WRITE_ADDR = 0x80406AB0
-EXPECTED_INDEX_ADDR = 0x80406394
-NODES_START_ADDR = 0x804063B0
-ACTIVE_NODE_ADDR = 0x80406B18
+# CURR_HEALTH_ADDR = 0x804061C2
+# CURR_NODE_ADDR = 0x80406B38
+# SLOT_NAME_ADDR = 0x80406374
+# ITEM_WRITE_ADDR = 0x80406AB0
+# EXPECTED_INDEX_ADDR = 0x80406394
+# NODES_START_ADDR = 0x804063B0
+# ACTIVE_NODE_ADDR = 0x80406B18
+
+
+def set_address(
+    regionCode=None,
+    curr_health_addr=None,
+    curr_node_addr=None,
+    slot_name_addr=None,
+    item_write_addr=None,
+    expected_index_addr=None,
+    nodes_start_addr=None,
+    active_node_addr=None,
+):
+    if regionCode is None:
+        regionCode = read_byte(0x80000003)
+    saveFileAddr = 0x804061C0  # US by default
+
+    match (regionCode):
+        case 0x50:  # ASCII for 'P', which is EU
+            saveFileAddr = 0x80408160
+        case 0x4A:  # ASCII for 'J', which is JP
+            saveFileAddr = 0x80400300
+
+    global CURR_HEALTH_ADDR, CURR_NODE_ADDR, SLOT_NAME_ADDR, ITEM_WRITE_ADDR, EXPECTED_INDEX_ADDR, NODES_START_ADDR, ACTIVE_NODE_ADDR
+
+    CURR_HEALTH_ADDR = (
+        curr_health_addr if curr_health_addr is not None else saveFileAddr + 0x2
+    )
+    CURR_NODE_ADDR = (
+        curr_node_addr if curr_node_addr is not None else saveFileAddr + 0x978
+    )
+    SLOT_NAME_ADDR = (
+        slot_name_addr if slot_name_addr is not None else saveFileAddr + 0x1B4
+    )
+    ITEM_WRITE_ADDR = (
+        item_write_addr if item_write_addr is not None else saveFileAddr + 0x8F0
+    )
+    EXPECTED_INDEX_ADDR = (
+        expected_index_addr if expected_index_addr is not None else saveFileAddr + 0x1D4
+    )
+    NODES_START_ADDR = (
+        nodes_start_addr if nodes_start_addr is not None else saveFileAddr + 0x1F0
+    )
+    ACTIVE_NODE_ADDR = (
+        active_node_addr if active_node_addr is not None else saveFileAddr + 0x958
+    )
+
+
+# ...existing code...
 
 
 class TPCommandProcessor(ClientCommandProcessor):
@@ -422,15 +470,31 @@ async def dolphin_sync_task(ctx: TPContext) -> None:
                 logger.info("Attempting to connect to Dolphin...")
                 dolphin_memory_engine.hook()
                 if dolphin_memory_engine.is_hooked():
-                    if dolphin_memory_engine.read_bytes(0x80000000, 6) != b"GZ2E01":
-                        logger.info(CONNECTION_REFUSED_GAME_STATUS)
-                        ctx.dolphin_status = CONNECTION_REFUSED_GAME_STATUS
-                        dolphin_memory_engine.un_hook()
-                        await asyncio.sleep(5)
-                    else:
-                        logger.info(CONNECTION_CONNECTED_STATUS)
-                        ctx.dolphin_status = CONNECTION_CONNECTED_STATUS
-                        ctx.locations_checked = set()
+                    try:
+                        if not (
+                            dolphin_memory_engine.read_bytes(0x80000000, 3) == b"GZ2"
+                            and dolphin_memory_engine.read_byte(0x80000003)
+                            in [
+                                ord("E"),
+                                ord("P"),
+                                ord("J"),
+                            ]
+                        ):
+                            logger.info(CONNECTION_REFUSED_GAME_STATUS)
+                            ctx.dolphin_status = CONNECTION_REFUSED_GAME_STATUS
+                            dolphin_memory_engine.un_hook()
+                            await asyncio.sleep(5)
+                        else:
+                            logger.info(CONNECTION_CONNECTED_STATUS)
+                            ctx.dolphin_status = CONNECTION_CONNECTED_STATUS
+                            ctx.locations_checked = set()
+                            set_address()
+                    except NameError as e:
+                        logger.error(f"Global address not set: {e}")
+                        set_address(regionCode=ord("E"))
+                    except Exception as e:
+                        logger.error(f"Unexpected error: {e}")
+                        raise e
                 else:
                     logger.info(
                         "Connection to Dolphin failed, attempting again in 5 seconds..."
@@ -440,6 +504,7 @@ async def dolphin_sync_task(ctx: TPContext) -> None:
                     await asyncio.sleep(5)
                     continue
         except Exception:
+
             dolphin_memory_engine.un_hook()
             logger.info(
                 "Connection to Dolphin failed, attempting again in 5 seconds..."
