@@ -344,7 +344,7 @@ class TPWorld(World):
 
         # Output seed name and slot number to seed RNG in randomizer client.
         output_data = {
-            # "Version": list(VERSION),
+            "Version": "v0.1.3",
             "Seed": multiworld.seed_name,
             "Slot": player,
             "Name": self.player_name,
