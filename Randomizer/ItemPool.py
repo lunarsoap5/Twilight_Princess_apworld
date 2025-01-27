@@ -213,7 +213,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Boss Defeated",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -226,7 +226,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Boss Defeated",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -239,7 +239,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Boss Defeated",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -252,7 +252,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Boss Defeated",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -265,7 +265,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Boss Defeated",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -278,7 +278,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Boss Defeated",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -291,7 +291,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Boss Defeated",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -304,7 +304,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Boss Defeated",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -320,7 +320,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Quest",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -333,7 +333,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Quest",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -346,7 +346,7 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Quest",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
@@ -359,14 +359,14 @@ def place_deterministic_items(world: "TPWorld") -> None:
                 code=None,
                 type="Quest",
                 quantity=1,
-                classification=ItemClassification.useful,
+                classification=ItemClassification.progression,
                 item_id=1,
             ),
         )
     )
     world.get_location(  # TODO: Maybe change this to a different item?
         "Ilia Memory Reward"
-    ).place_locked_item(item_factory("Silver Rupee", world))
+    ).place_locked_item(item_factory("Horse Call", world))
 
     # Portal items are used only for logic, so we can place them here.
     # TODO: Set portal location here as well as the item.?
