@@ -74,48 +74,48 @@ Twilight Princess:
 
   golden_bugs_shuffled:
     # This controls whether the golden bugs can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   sky_characters_shuffled:
     # This controls whether the sky characters can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   npc_items_shuffled:
     # This controls whether the NPC items can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   shop_items_shuffled:
     # This controls whether the shop items can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   hidden_skills_shuffled:
     # This controls whether the hidden skills can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   poe_shuffled:
     # This controls whether Poe Souls can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   overworld_shuffled:
     # This controls whether overworld locations can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   heart_piece_shuffled:
     # This controls whether heart pieces can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   dungeons_shuffled:
     # This controls whether dungeons can contain Progression items.
-    "false": 50
-    "true": 0
+    "false": 0
+    "true": 50
 
   # Item Randomizer Modes
   map_and_compass_settings:
