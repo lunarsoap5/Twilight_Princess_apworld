@@ -1,6 +1,7 @@
 from typing import Dict
 from BaseClasses import MultiWorld, Region
 from ..Locations import TPLocation, LOCATION_TABLE
+from ..options import SkipArbitersGroundsEntrance
 
 
 def create_regions(world: MultiWorld, player: int) -> Dict[str, Region]:
@@ -3981,14 +3982,16 @@ def create_regions(world: MultiWorld, player: int) -> Dict[str, Region]:
         )
     )
 
-    bulblin_camp.locations.append(
-        TPLocation(
-            player,
-            "Bulblin Guard Key",
-            bulblin_camp,
-            LOCATION_TABLE["Bulblin Guard Key"],
+    # If Arbiters Ground Bublin Camp is skipped Bublin Guard Key is not available
+    if not world.worlds[player].options.skip_arbiters_grounds_entrance.value:
+        bulblin_camp.locations.append(
+            TPLocation(
+                player,
+                "Bulblin Guard Key",
+                bulblin_camp,
+                LOCATION_TABLE["Bulblin Guard Key"],
+            )
         )
-    )
 
     outside_arbiters_grounds = Region("Outside Arbiters Grounds", player, world)
     regions["Outside Arbiters Grounds"] = outside_arbiters_grounds
