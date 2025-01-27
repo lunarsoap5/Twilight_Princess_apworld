@@ -3,10 +3,7 @@ from collections.abc import Mapping
 from dataclasses import fields
 import json
 import os
-from typing import Any, ClassVar, Dict, Optional, Set, Tuple
-import typing
-
-import yaml  # type: ignore
+from typing import Any, ClassVar, Dict, List, Optional, Set, Tuple
 
 from BaseClasses import CollectionState, Item
 from BaseClasses import ItemClassification as IC
@@ -30,7 +27,6 @@ from worlds.LauncherComponents import (
     components,
     launch_subprocess,
 )
-from BaseClasses import Region
 from .Randomizer.Dungeons import Dungeon, create_dungeons
 from .Randomizer.ItemPool import (
     generate_itempool,
@@ -137,6 +133,8 @@ class TPWorld(World):
         # self.dungeons: Dict[str, Dungeon] = {}
 
         self.nonprogress_locations: Set[str] = set()
+
+        self.invalid_locations: List[str] = []
 
         # self.boss_reqs = RequiredBossesRandomizer(self)
 
@@ -378,6 +376,9 @@ class TPWorld(World):
                         "classification": "filler",
                     }
                 output_data["Locations"][location.name] = item_info
+
+        output_data["InvalidLocations"] = self.invalid_locations
+
         #
         # # Output the mapping of entrances to exits.
         # all_entrance_names = [en.entrance_name for en in ALL_ENTRANCES]

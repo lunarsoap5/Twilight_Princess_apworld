@@ -121,10 +121,19 @@ def set_location_access_rules(world: "TPWorld"):
     ) -> None:
         # Only worry about logic if the location can be a progress item (and location_name not in world.nonprogress_locations) do not worry bout yet
         if location_name in LOCATION_TABLE:
+            try:
+                location = world.get_location(location_name)
+            except KeyError:
+                # If we do not create a location (in region creation) it will not be in the world but we will still try to add the rule
+                # This means we only add the logic to remove the location at region creation
+                # Example: Bublin Camp Key
+                world.invalid_locations.append(location_name)  # Debug
+                return
+
             if world.options.logic_rules.value == LogicRules.option_glitched:
-                set_rule(world.get_location(location_name), glitched_rule)
+                set_rule(location, glitched_rule)
             else:
-                set_rule(world.get_location(location_name), rule)
+                set_rule(location, rule)
         else:
             raise Exception(f"Location {location_name} not found in location table")
 
